@@ -89,8 +89,6 @@ steps:
         echo "Branch '$BRANCH_NAME' does not represent an official environment."
         echo "*******************************************************************************"
       fi
-# [END tf-apply]      
-
+# [END tf-apply]
 options:
-  logging:
-    gcs_log_bucket: 'gs://tf-state-interns-johan'
+  logging: CLOUD_LOGGING_ONLY
