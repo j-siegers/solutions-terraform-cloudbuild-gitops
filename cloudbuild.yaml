@@ -90,3 +90,7 @@ steps:
         echo "*******************************************************************************"
       fi
 # [END tf-apply]      
+
+options:
+  logging:
+    gcs_log_bucket: 'gs://tf-state-interns-johan'
