@@ -33,14 +33,14 @@ module "http_server" {
   subnet  = "${module.vpc.subnet}"
 }
 
-module "http_server" {
-  source  = "../../modules/http_server"
-  project = "${var.project}"
-  subnet  = "${module.vpc.subnet}"
-}
-
 module "firewall" {
   source  = "../../modules/firewall"
   project = "${var.project}"
   subnet  = "${module.vpc.subnet}"
+}
+
+resource "google_storage_bucket" "test_bucket" {
+  name = "interns-johan-test-bucket"
+  location = "us-west1"
+  uniform_bucket_level_access = true
 }
